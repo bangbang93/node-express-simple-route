@@ -1,6 +1,6 @@
 {
   "name": "express-simple-route",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "load route just looks like then in file system",
   "main": "index.js",
   "scripts": {
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/bangbang93/node-express-simple-route/issues"
   },
-  "homepage": "https://github.com/bangbang93/node-express-simple-route#readme"
+  "homepage": "https://github.com/bangbang93/node-express-simple-route#readme",
+  "dependencies": {
+    "debug": "^2.2.0"
+  }
 }
