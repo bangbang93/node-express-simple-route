@@ -1,6 +1,6 @@
 var fs = require('fs');
 var path = require('path');
-var debug = require('debug:express-simple-route');
+var debug = require('debug')('express-simple-route');
 
 module.exports = function (base, app) {
   function loadRoute(dir, app) {
@@ -17,5 +17,6 @@ module.exports = function (base, app) {
   	  	}
   	  }
   	})
-  }
+  };
+  loadRoute(base, app);
 };
