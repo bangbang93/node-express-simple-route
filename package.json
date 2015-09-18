@@ -1,0 +1,23 @@
+{
+  "name": "express-simple-route",
+  "version": "1.0.0",
+  "description": "load route just looks like then in file system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bangbang93/node-express-simple-route.git"
+  },
+  "keywords": [
+    "express",
+    "route"
+  ],
+  "author": "bangbang93",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/bangbang93/node-express-simple-route/issues"
+  },
+  "homepage": "https://github.com/bangbang93/node-express-simple-route#readme"
+}

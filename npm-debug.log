@@ -1,0 +1,85 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\nodejs\\node.exe',
+1 verbose cli   'C:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@2.14.2
+3 info using node@v4.0.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'F:\\Code\\nodejs\\node-express-simple-route',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\伟航\AppData\Roaming\npm-cache\express-simple-route\1.0.0\package.tgz not in flight; packing
+9 verbose tar pack [ 'C:\\Users\\伟航\\AppData\\Roaming\\npm-cache\\express-simple-route\\1.0.0\\package.tgz',
+9 verbose tar pack   'F:\\Code\\nodejs\\node-express-simple-route' ]
+10 verbose tarball C:\Users\伟航\AppData\Roaming\npm-cache\express-simple-route\1.0.0\package.tgz
+11 verbose folder F:\Code\nodejs\node-express-simple-route
+12 info prepublish express-simple-route@1.0.0
+13 verbose addLocalTarball adding from inside cache C:\Users\伟航\AppData\Roaming\npm-cache\express-simple-route\1.0.0\package.tgz
+14 silly cache afterAdd express-simple-route@1.0.0
+15 verbose afterAdd C:\Users\伟航\AppData\Roaming\npm-cache\express-simple-route\1.0.0\package\package.json not in flight; writing
+16 verbose afterAdd C:\Users\伟航\AppData\Roaming\npm-cache\express-simple-route\1.0.0\package\package.json written
+17 silly publish { name: 'express-simple-route',
+17 silly publish   version: '1.0.0',
+17 silly publish   description: 'load route just looks like then in file system',
+17 silly publish   main: 'index.js',
+17 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'git+https://github.com/bangbang93/node-express-simple-route.git' },
+17 silly publish   keywords: [ 'express', 'route' ],
+17 silly publish   author: { name: 'bangbang93' },
+17 silly publish   license: 'WTFPL',
+17 silly publish   bugs: { url: 'https://github.com/bangbang93/node-express-simple-route/issues' },
+17 silly publish   homepage: 'https://github.com/bangbang93/node-express-simple-route#readme',
+17 silly publish   readme: 'ERROR: No README data found!',
+17 silly publish   _id: 'express-simple-route@1.0.0',
+17 silly publish   _shasum: '2e168e95a909630b87689b121a85472cded411d4',
+17 silly publish   _from: '.' }
+18 verbose getPublishConfig undefined
+19 silly mapToRegistry name express-simple-route
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/express-simple-route
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading C:\Users\伟航\AppData\Roaming\npm-cache\express-simple-route\1.0.0\package.tgz
+25 verbose request uri https://registry.npmjs.org/express-simple-route
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 09:51:38
+28 verbose request using bearer token for auth
+29 verbose request id 8e6e5533067a5526
+30 http request PUT https://registry.npmjs.org/express-simple-route
+31 info retry will retry, error on last attempt: Error: read ECONNRESET
+32 info attempt registry request try #2 at 09:52:10
+33 verbose request using bearer token for auth
+34 http request PUT https://registry.npmjs.org/express-simple-route
+35 info retry will retry, error on last attempt: Error: read ECONNRESET
+36 info attempt registry request try #3 at 09:53:32
+37 verbose request using bearer token for auth
+38 http request PUT https://registry.npmjs.org/express-simple-route
+39 verbose request invalidating C:\Users\伟航\AppData\Roaming\npm-cache\registry.npmjs.org\express-simple-route on PUT
+40 error publish Failed PUT undefined
+41 verbose stack Error: read ECONNRESET
+41 verbose stack     at exports._errnoException (util.js:837:11)
+41 verbose stack     at TLSWrap.onread (net.js:544:26)
+42 verbose cwd F:\Code\nodejs\node-express-simple-route
+43 error Windows_NT 10.0.10240
+44 error argv "C:\\nodejs\\node.exe" "C:\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+45 error node v4.0.0
+46 error npm  v2.14.2
+47 error code ECONNRESET
+48 error errno ECONNRESET
+49 error syscall read
+50 error network read ECONNRESET
+50 error network This is most likely not a problem with npm itself
+50 error network and is related to network connectivity.
+50 error network In most cases you are behind a proxy or have bad network settings.
+50 error network
+50 error network If you are behind a proxy, please make sure that the
+50 error network 'proxy' config is set properly.  See: 'npm help config'
+51 verbose exit [ 1, true ]
