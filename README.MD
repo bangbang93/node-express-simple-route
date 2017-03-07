@@ -7,6 +7,12 @@ require('express-simple-route')(path.join(__dirname, 'routes'), app);
 ```
 to your app.js
 
+or use the second param to specific base route
+
+```javascript
+require('express-simple-route')(path.join(__dirname, 'routes'), app, '/api');
+```
+
 it will load all js file under "routes" directory.
 
 in those js file ,write express route looks like

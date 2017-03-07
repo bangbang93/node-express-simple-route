@@ -2,7 +2,7 @@ const fs    = require('fs');
 const path  = require('path');
 const debug = require('debug')('express-simple-route');
 
-module.exports = function (base, app) {
+module.exports = function (base, app, baseUrl = '/') {
   function loadRoute(dir, app) {
     const files = fs.readdirSync(dir);
     files.forEach(function (e) {
@@ -12,7 +12,7 @@ module.exports = function (base, app) {
         if (e.match(/\.js$/i)) {
           const url = path.relative(base, path.join(dir, e));
           debug("loading route for %s", url);
-          app.use('/' + url.substr(0, url.length - 3).replace('\\', '/') //route url
+          app.use(path.join(baseUrl, url.substr(0, url.length - 3).replace('\\', '/')) //route url
           , require(path.join(base, url)));
         }
       }
