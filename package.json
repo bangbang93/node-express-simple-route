@@ -1,6 +1,6 @@
 {
   "name": "express-simple-route",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "load route just looks like then in file system",
   "main": "index.js",
   "scripts": {
