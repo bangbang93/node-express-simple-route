@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "^4.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bangbang93/node-express-simple-route.git"
@@ -20,7 +23,7 @@
     "url": "https://github.com/bangbang93/node-express-simple-route/issues"
   },
   "homepage": "https://github.com/bangbang93/node-express-simple-route#readme",
-  "dependencies": {
+  "peerDependencies": {
     "debug": "^2.2.0"
   }
 }
