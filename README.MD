@@ -27,8 +27,33 @@ router.get('/', function (req, res, next){
 router.post('/', function (req, res, next){
 	res.send('post example');
 });
+
+module.exports = router;
 ```
 
 and named this file "example.js"
 
 all request /example will enter this router;
+
+## aliases
+```javascript
+var router = require('express').Router();
+
+router.get('/', function (req, res, next){
+	res.send('success');
+});
+
+router.post('/', function (req, res, next){
+	res.send('post example');
+});
+
+router.alias = ['user', 'users'];
+
+module.exports = router;
+```
+
+this will run like 
+```js
+app.use('/user', router);
+app.use('/users', router);
+```

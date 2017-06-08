@@ -12,8 +12,16 @@ module.exports = function (base, app, baseUrl = '/') {
         if (e.match(/\.js$/i)) {
           const url = path.relative(base, path.join(dir, e));
           debug("loading route for %s", url);
-          app.use(path.join(baseUrl, url.substr(0, url.length - 3).replace('\\', '/')) //route url
-          , require(path.join(base, url)));
+          const router = require(path.join(base, url));
+          if (router.aliases){
+            router.aliases.forEach((alias) => {
+              debug("%s has alias %s", url, alias);
+              app.use(path.join(baseUrl, alias), router);
+            })
+          } else {
+            app.use(path.join(baseUrl, url.substr(0, url.length - 3).replace('\\', '/')) //route url
+              , router);
+          }
         }
       }
     })
