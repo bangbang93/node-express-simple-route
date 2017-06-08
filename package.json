@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/bangbang93/node-express-simple-route#readme",
   "peerDependencies": {
-    "debug": "^2.2.0"
+    "express": "^4.15.3",
+    "debug": "^2.6.8"
   }
 }
