@@ -16,7 +16,7 @@ module.exports = function (base, app, baseUrl = '/') {
           if (router.aliases){
             router.aliases.forEach((alias) => {
               debug("%s has alias %s", url, alias);
-              app.use(path.join(baseUrl, alias), router);
+              app.use(path.join(baseUrl, path.dirname(url), alias), router);
             })
           } else {
             app.use(path.join(baseUrl, url.substr(0, url.length - 3).replace('\\', '/')) //route url
