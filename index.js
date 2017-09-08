@@ -5,8 +5,8 @@ const debug = require('debug')('express-simple-route');
 module.exports = function (base, app, baseUrl = '/') {
   function loadRoute(dir, app) {
     const files = fs.readdirSync(dir);
+    const dirs = [];
     files.forEach(function (e) {
-      const dirs = [];
       if (fs.statSync(path.join(dir, e)).isDirectory()) {
         dirs.push(path.join(dir, e))
       } else {
@@ -25,8 +25,8 @@ module.exports = function (base, app, baseUrl = '/') {
           }
         }
       }
-      dirs.forEach((dir) => loadRoute(dir, app))
     })
+    dirs.forEach((dir) => loadRoute(dir, app))
   }
   loadRoute(base, app);
 };
