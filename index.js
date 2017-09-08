@@ -6,8 +6,9 @@ module.exports = function (base, app, baseUrl = '/') {
   function loadRoute(dir, app) {
     const files = fs.readdirSync(dir);
     files.forEach(function (e) {
+      const dirs = [];
       if (fs.statSync(path.join(dir, e)).isDirectory()) {
-        loadRoute(path.join(dir, e), app);
+        dirs.push(path.join(dir, e))
       } else {
         if (e.match(/\.js$/i)) {
           const url = path.relative(base, path.join(dir, e));
@@ -24,6 +25,7 @@ module.exports = function (base, app, baseUrl = '/') {
           }
         }
       }
+      dirs.forEach((dir) => loadRoute(dir, app))
     })
   }
   loadRoute(base, app);
