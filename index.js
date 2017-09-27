@@ -10,7 +10,7 @@ module.exports = function (base, app, baseUrl = '/') {
       if (fs.statSync(path.join(dir, e)).isDirectory()) {
         dirs.push(path.join(dir, e))
       } else {
-        if (e.match(/\.js$/i)) {
+        if (e.match(/\.(js|ts|esm)$/i)) {
           const url = path.relative(base, path.join(dir, e));
           debug("loading route for %s", url);
           const router = require(path.join(base, url));

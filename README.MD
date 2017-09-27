@@ -57,3 +57,10 @@ this will run like
 app.use('/user', router);
 app.use('/users', router);
 ```
+
+## typescript
+please use `export = router`
+
+## changelog
+### 1.6.0
+- support typescript and es6 module `filename.match(/\.(js|ts|esm)$/i)`
