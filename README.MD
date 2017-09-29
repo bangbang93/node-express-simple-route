@@ -62,5 +62,7 @@ app.use('/users', router);
 please use `export = router`
 
 ## changelog
+### 1.6.1 
+fix windows
 ### 1.6.0
 - support typescript and es6 module `filename.match(/\.(js|ts|esm)$/i)`
