@@ -1,5 +1,7 @@
 # express-simple route
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bangbang93/node-express-simple-route.svg)](https://greenkeeper.io/)
+
 ## usage
 just simple add
 ```javascript
