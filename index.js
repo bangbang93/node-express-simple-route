@@ -20,7 +20,7 @@ module.exports = function (base, app, baseUrl = '/') {
               app.use(path.join(baseUrl, path.dirname(url), alias), router);
             })
           } else {
-            app.use(path.join(baseUrl, url.substr(0, url.length - 3).replace('\\', '/')) //route url
+            app.use(path.join(baseUrl, url.substr(0, url.length - 3).replace(/\\/g, '/')) //route url
               , router);
           }
         }
