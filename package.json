@@ -1,6 +1,6 @@
 {
   "name": "express-simple-route",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "description": "load route just looks like then in file system",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/bangbang93/node-express-simple-route#readme",
   "peerDependencies": {
-    "express": ">3",
-    "debug": "^2.6.8"
+    "express": ">3"
+  },
+  "dependencies": {
+    "debug": "^3.1.0"
   }
 }
